@@ -1,0 +1,6 @@
+int ch()
+{
+    int x = 0;
+    if(!(cin>>x)){cout<<"input is incorrect"<<endl;cin.clear();cin.ignore(32767,'\n'); return ch();}
+    return x;
+}
