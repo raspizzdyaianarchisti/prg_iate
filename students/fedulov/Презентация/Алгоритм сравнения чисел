@@ -1,0 +1,54 @@
+#include <iostream>
+#include <math.h>
+#include <clocale>
+using namespace std;
+
+
+
+int main()
+{
+    setlocale(LC_CTYPE, "rus");
+    int a, b, c, max1, max2, max3;
+    printf("Введите 3 неравных числа для сортировки (по убыванию)\n");
+    do
+    {
+	printf("Введите a\n");
+         cin a;
+	printf("Введите b\n");
+         cin b;
+	printf("Введите c\n");
+         cin c;
+	if(a==b && b==c && c==a) printf("Введите 3 не одинаковых числа!!!\n");
+    }
+    while(a==b && b==c && c==a);
+    if(a>b)
+    {
+        max1=a;
+        max2=b;
+    }
+    else
+    {
+        max1=b;
+        max2=a;
+    }
+    if(max1>c)
+        {
+        if(max2>c)
+        {
+            max3=c;
+        }
+    else
+            {
+            max3=max2;
+            max2=c;
+            }
+        }
+    else
+        {
+        max3=max2;
+        max2=max1;
+        max1=c;
+        }
+printf("Сортированные числа: %i,%i,%i",max1,max2,max3);
+return 0;
+}
