@@ -1,1 +1,30 @@
+#include<iostream>
+#include <math.h>
+#include <clocale>
+using namespace std;
 
+int main()
+{
+    setlocale(LC_CTYPE,"rus");
+    float a;
+
+    printf("Введите угол в градусах\n");
+
+    cin a;
+    a=a*M_PI/180;
+
+    double y1=pow(2*sin(3*M_PI-2*a),2)*pow(cos(5*M_PI+2*a),2);
+    double y2=1-1/4*pow(sin(2*a),2)+cos(2*a);
+    double y3=1/4.-1/4.*sin(5/8*M_PI-8*a);
+    double y4=pow(cos(a),2)+pow(cos(a),4);
+
+
+    printf("Y1=2*sin(2*(3*pi-2a))*cos(2*(5*pi+2a))=%f\n",y1);
+    printf("Y2=1-1/(4*sin(22*a))+cos(2*a)=%f\n",y2);
+    printf("Y3=1/4-1/(sin(5/(8*pi)-8*a)=%f\n",y3);
+    printf("Y4=cos(2*a)+cos(4*a)=%f\n",y4);
+
+
+return 0;
+
+}
