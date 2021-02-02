@@ -1,0 +1,21 @@
+/*Дано целое число М (1 < М < 33). Вывести М
+первых прописных (то есть заглавных) букв
+русского алфавита.*/
+#include<iostream>
+#include <ctype.h>
+#include<clocale>
+#include <time.h>
+using namespace std;
+int main()
+{
+    setlocale(LC_CTYPE,"RUSSIAN");
+    int n=0;
+    char str[34]="абвгдеёжзийклмнопрстуфхцчшщъыьэюя";
+    do{
+    printf("Введите количество букв в диапазоне от 1 до 33 включительно \n");
+    scanf("%i",&n);}
+    while(n<1||n>33);
+    for (int i=0;i<n;i++)
+        printf("%c",toupper(str[i]));
+    return 0;
+}
