@@ -1,0 +1,22 @@
+//Найти все делители целого положительного числа.
+#include<iostream>
+#include <time.h>
+#include <math.h>
+#include <clocale>
+using namespace std;
+
+
+int main(){
+
+    setlocale(LC_CTYPE,"rus");
+    printf("Введите положительное целое число для поиска делителей: ");
+    int x;
+    scanf("%d",x);
+    printf("Делители числа %i:\n",x);
+    for(int i=1;i<=x;i++){
+        if (x%i==0){
+            printf("\n%d",i);
+        }
+    }
+    return 0;
+}
