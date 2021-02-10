@@ -1,0 +1,45 @@
+//напечатать таблицу значений функции y=x^2+1 во введнённом диапазоне таблица в консоли столбе x столбец y
+#include <iostream>
+#include <algorithm>
+#include <math.h>
+#include <clocale>
+using namespace std;
+
+
+
+int main()
+{
+    setlocale(LC_CTYPE,"rus");
+    float a,b,z;
+
+    printf("Таблица значений функции от верхней границы к нижней(от меньшего числа к большему)\n");
+    printf("Введите верхнюю границу: ");
+    cin>>a;
+
+    printf("Введите нижнюю границу: ");
+    cin>>b;
+
+    if(a==b)
+        {
+            printf("Введите разные числа\n");
+            return 0;
+        }
+
+    if (b<a)
+        {
+            printf("Числа в порядке возрастания\n");
+            b = a*b;
+            a = b/a;
+            b=b/a;
+        }
+    printf("   Table of y=x^2+1  \n");
+    printf("+---------T---------+\n");
+    printf("|    x    |    y    |\n");
+    printf("+---------|---------+\n");
+    for ( ;a<=b;a+=0.1)
+    {
+        printf("| %7.2f | %7.2f |\n",a,pow(a,2)+1);
+        printf("|---------|---------|\n");
+    }
+
+}
